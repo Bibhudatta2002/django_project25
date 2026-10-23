@@ -1,0 +1,43 @@
+{% extends 'dummy.html' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body_block %}
+
+<center>
+    <h1>Registration</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ EUMFO.as_p }}
+        {{ EPMFO.as_p }}
+
+        <input type="submit" value="Register">
+    </form>
+</center>
+
+<style>
+    form {
+        width: 350px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    input[type="submit"] {
+        background: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background: #0056b3;
+    }
+</style>
+
+{% endblock %}

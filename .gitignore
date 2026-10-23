@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+venv/
+env/
+Bibhu/
+.env
+db.sqlite3
+staticfiles/
+media/
+.vscode/
